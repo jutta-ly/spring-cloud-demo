@@ -53,6 +53,11 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!--hystrix 依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

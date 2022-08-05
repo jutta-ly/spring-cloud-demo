@@ -24,10 +24,10 @@ public class DeptServiceImpl implements DeptService {
       fallbackMethod = "dept_TimeoutHandler",
       commandProperties =
       // 规定 5 秒钟以内就不报错，正常运行，超过 5 秒就报错，调用指定的方法
-      {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")})
+      {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")})
   @Override
   public String deptInfoTimeout(Integer id) {
-    int outTime = 3;
+    int outTime = 4;
     try {
       TimeUnit.SECONDS.sleep(outTime);
     } catch (InterruptedException e) {
